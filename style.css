@@ -18,6 +18,9 @@ body.dark_theme{
 
 /* modifica a aparencia do site */
 body{
+    h1{
+        background-color: blue;
+    }
     /* ?============================== body-color ================================= */
     background-color: var(--bg-body-color);
     color: var(--text-color);
