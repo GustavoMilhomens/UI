@@ -6,7 +6,7 @@ function add_element(){
     //* add style 
     const link = document.createElement('link'); //? cria uma variavel que recebe o elemento link
     link.rel = 'stylesheet'; //? configura 
-    link.href = '/atividades/atividades_ifto/UI/style.css'; //? referencia o css
+    link.href = '/style.css'; //? referencia o css
     document.head.append(link); //? adiciona o elemento
     //! o append() adiciona no final 
 
@@ -25,11 +25,11 @@ function add_element(){
 // procura o arquivo de menu 
 async function include_complement() {
     // coleta o caminho do menu 
-    const menu_bar = await fetch("/atividades/atividades_ifto/UI/complementos/barra_menu.html");
+    const menu_bar = await fetch("/complementos/barra_menu.html");
     document.getElementById('menu_div').innerHTML = await menu_bar.text();
     
     // coleta o caminho da caxa de preferencias
-    const config_box = await fetch('/atividades/atividades_ifto/UI/complementos/configuracao.html');
+    const config_box = await fetch('/complementos/configuracao.html');
     document.getElementById('config_div').innerHTML = await config_box.text();
     
 }
