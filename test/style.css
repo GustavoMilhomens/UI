@@ -1,0 +1,175 @@
+/* cor padrao  */
+:root{
+    --bg-color: rgb(249, 249, 249);
+    --bg-btn-color: rgb(174, 254, 250);
+    --bg-menu-color: rgb(229, 229, 229);
+    --text-color: rgb(0, 0, 0);
+    
+}
+
+/* variaveis para o tema escuro */
+body.dark_theme{
+    --bg-body-color: rgb(19, 19, 19);
+    --bg-btn-color: rgb(68, 154, 150);
+    --bg-menu-color: rgb(55, 55, 55);
+    --text-color: rgb(255, 255, 255);
+}
+
+
+/* modifica a aparencia do site */
+body{
+    /* ============================== body-color ================================= */
+    background-color: var(--bg-body-color);
+    color: var(--text-color);
+    transition: 0.3s;
+    /* cor */
+    /* formato */
+    /* posição */
+    /* outros */
+
+    /* ============================== menu ================================= */
+
+    /* customiza a barra de menu */
+    #menu_div_bar{
+        /* cor */
+        background-color: var(--bg-menu-color);
+        color: var(--text-color);
+
+        /* formato */
+        height: 100%;
+        width: 25%;
+        
+        /* posição */
+        position: fixed;
+        z-index: 100;  /* seleciona a camada */
+        top: 0;  /* deixa a div ocupar a tela inteira */
+        right: -25%;
+
+        /* outros */
+        cursor: pointer;
+        transition: 0.5s;
+        
+        a{
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        button{
+            background-color: rgba(240, 248, 255, 0);
+            color: var(--text-color);
+            border: none;
+            cursor: pointer;
+        }
+        
+        
+    }
+
+    /* modifica a localização da div se ela estiver como ativa fazendo ela ficar visivel */
+    #menu_div_bar.active{
+        right: 0;
+    }
+
+    /* butão de ativação da barra menu  */
+    #btn_menu{
+        /* cor */
+        background-color: var(--bg-btn-color);
+        color: var(--text-color);
+
+        /* formato */
+        border-radius: 15%;
+        height: 30px;
+        width: 30px;
+
+        /* posição */
+        right: 0;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        
+        
+    }
+
+    /* =============================== config ================================ */
+
+    /* customiza a caixa de preferencia */
+    #config_div_box{
+        /* cor */
+        background-color: var(--bg-menu-color);
+        color: var(--text-color);
+
+        /* formato */
+        display: none;
+        border: 10px;
+        border-color: rgb(249, 249, 249);
+        height: 100%;
+        width: 100%;
+
+        /* posição */
+        position: fixed;
+        z-index: 1000;  /* seleciona a camada */
+        top: 0;  /* deixa a div ocupar o topo inteiro */
+        left: 0;
+
+        /* outros */
+
+    }
+
+    /* modifica a localização da div se ela estiver como ativa fazendo ela ficar visivel */
+    #config_div_box.active{
+        /* remove a caixa de preferencia */
+        display: block;
+
+    }
+
+    /* botão que fecha a caixa de preferencias */
+    #close_config{
+        /* cor */
+
+        /* formato */
+        border-radius: 100%;
+
+        /* posição */
+        position: absolute;
+        right: 0;
+    }
+
+    button{
+        background-color:  var(--bg-btn-color);
+        color: var(--text-color);
+    }
+    nav{
+        /* cor */
+        background-color: rgb(94, 94, 94);
+
+        /* formato */
+        width: 100%;
+        padding: 0.7%;
+        left: 0;
+        
+
+
+        /* posição */
+        position:fixed;
+        top: 0;
+        
+        
+        /* outros */
+        
+        
+        /* padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
+        border-bottom: #dee2e6 1px solid;
+        align-items: stretch;
+        height: 61px; */
+
+    }
+    button{
+        background-color: rgb(88, 88, 88);
+        color: rgb(255, 255, 255);
+        border-color: aliceblue;
+    }
+
+
+
+}
