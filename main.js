@@ -3,7 +3,7 @@ document.documentElement.lang="pt-br";
 
 function add_link_menu() {
   const base = window.location.origin + "/" + window.location.pathname.split("/")[1];
-  console.log(base)
+  console.log("base"+base)
 
 //   const container = document.querySelector("details");
 
