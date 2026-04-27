@@ -61,7 +61,7 @@ async function add_element(){
     await include_complement();
     
     // adiciona os links de atividades da barra menu 
-    add_link_menu();
+    await add_link_menu();
 
     //! ===========================|visualizar erros|================================
     console.log('style.css, menu_div e config_div adicionado')
