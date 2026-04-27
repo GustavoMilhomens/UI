@@ -123,8 +123,8 @@ async function start() {
 
 // chama as funções
 async function init(){
-    add_element();
-    start();
+    await add_element();
+    await start();
 }
 
 init()
