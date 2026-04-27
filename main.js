@@ -1,6 +1,8 @@
 // faz com que a linguagem fique em portugues 
 document.documentElement.lang="pt-br";
-const base = window.location.origin + "/" + window.location.pathname.split("/")[1];  // informa o caminho principal
+
+// informa o caminho principal
+const base = window.location.origin + "/" + window.location.pathname.split("/")[1];  
 
 function add_link_menu() {
     //? identifica o butão btn_config
@@ -8,7 +10,7 @@ function add_link_menu() {
 
 
     const details = document.createElement("details");
-    //? cria o 
+    //? implementa os elementos referenciados corretamente
     details.innerHTML = `
         <summary>Atividades</summary>
         <a href="${base}/index.html">Introdução da Disciplina</a><br>
