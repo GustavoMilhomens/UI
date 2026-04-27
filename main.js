@@ -122,6 +122,9 @@ async function start() {
 }
 
 // chama as funções
-add_element();
-start();
+async function init(){
+    add_element();
+    start();
+}
 
+init()
