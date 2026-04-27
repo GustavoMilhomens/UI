@@ -57,6 +57,10 @@ async function add_element(){
     div_menu.id = 'menu_div'; 
     document.body.prepend(div_menu);
 
+    // espera as divs carregarem para adicionar os complementos 
+    await include_complement();
+    
+    // adiciona os links de atividades da barra menu 
     add_link_menu();
 
     //! ===========================|visualizar erros|================================
@@ -91,8 +95,6 @@ function open_close_config(){
 
 // deixa o sistema funcionando de forma assincrona 
 async function start() {
-    await include_complement();
-
     // cria um botão onde de para mudar o tema do site
     const btn_theme = document.getElementById("btn_theme");
     const var_theme = localStorage.getItem("theme");
