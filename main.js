@@ -1,9 +1,35 @@
 // faz com que a linguagem fique em portugues 
 document.documentElement.lang="pt-br";
+const base = window.location.origin + "/" + window.location.pathname.split("/")[1];  // informa o caminho principal
 
 function add_link_menu() {
-  const base = window.location.origin + "/" + window.location.pathname.split("/")[1];
-  
+    //? identifica o butão btn_config
+    const btn = document.getElementById("btn_config");
+
+
+    const details = document.createElement("details");
+    //? cria o 
+    details.innerHTML = `
+        <summary>Atividades</summary>
+        <a href="${base}/index.html">Introdução da Disciplina</a><br>
+
+        <details>
+            <summary>1° Bimestre</summary>
+            <a href="${base}/atvs/bim1_teoria/atv2/index.html">Atividade 02: A Evolução do Windows</a><br>
+            <a href="${base}/atvs/bim1_teoria/atv3/index.html">Atividade 03: A Evolução das interfaces da Apple</a><br>
+            <a href="${base}/atvs/bim1_teoria/atv4/index.html">Atividade 04: Análise Crítica a sites sem </a><br>
+            <a href="${base}/atvs/bim1_teoria/atv5/index.html">Atividade 05: Pesquisa sobre ferramentas de padronização</a><br>
+            <a href="${base}/atvs/bim1_teoria/atv6/index.html">Pesquisa: O que é Gestalt e Heurísticas de Nielsen</a>
+        </details>
+
+        <details>
+            <summary>2° Bimestre</summary>
+            <a href="${base}/atvs/bim2_pratica/atv1/index.html">Identidade Visual</a>
+        </details>
+        `;
+
+    //? Insere antes do botão
+    btn.parentElement.insertBefore(details, btn);
 
 //   const container = document.querySelector("details");
 
@@ -64,6 +90,8 @@ async function add_element(){
     const div_menu = document.createElement('div'); 
     div_menu.id = 'menu_div'; 
     document.body.prepend(div_menu);
+
+    
 }
 
 // procura o arquivo de menu 
