@@ -32,6 +32,9 @@ function add_link_menu() {
 
     //? Insere antes do botão
     btn.parentElement.insertBefore(details, btn);
+
+    //! ===========================================================
+    console.log('referencia de atividades adicionado')
 }
 
 // adiciona o style e as divs, menu e config, em todos os arquivos que receberem o main.js
@@ -53,6 +56,8 @@ async function add_element(){
     const div_menu = document.createElement('div'); 
     div_menu.id = 'menu_div'; 
     document.body.prepend(div_menu);
+
+    add_link_menu();
 
     
 }
@@ -110,6 +115,5 @@ async function start() {
 
 // chama as funções
 add_element();
-add_link_menu();
 start();
 
