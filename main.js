@@ -6,7 +6,7 @@ async function add_element(){
     //* add style 
     const link = document.createElement('link'); //? cria uma variavel que recebe o elemento link
     link.rel = 'stylesheet'; //? configura 
-    link.href = '/style.css'; //? referencia o css
+    link.href = './style.css'; //? referencia o css
     document.head.append(link); //? adiciona o elemento
     //! o append() adiciona no final 
 
