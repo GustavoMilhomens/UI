@@ -8,7 +8,7 @@ function add_link_menu() {
     //? identifica o butão btn_config
     const btn = document.getElementById("btn_config");
 
-
+    //? cria o datails 
     const details = document.createElement("details");
     //? implementa os elementos referenciados corretamente
     details.innerHTML = `
@@ -33,7 +33,7 @@ function add_link_menu() {
     //? Insere antes do botão
     btn.parentElement.insertBefore(details, btn);
 
-    //! ===========================================================
+    //! ===========================|visualizar erros|================================
     console.log('referencia de atividades adicionado')
 }
 
@@ -59,7 +59,8 @@ async function add_element(){
 
     add_link_menu();
 
-    
+    //! ===========================|visualizar erros|================================
+    console.log('style.css, menu_div e config_div adicionado')
 }
 
 // procura o arquivo de menu 
@@ -72,6 +73,8 @@ async function include_complement() {
     const config_box = await fetch( base + 'complementos/configuracao.html');
     document.getElementById('config_div').innerHTML = await config_box.text();
     
+    //! ===========================|visualizar erros|================================
+    console.log('complementos adicionados')
 }
 
 // abre e fecha o menu 
@@ -111,6 +114,9 @@ async function start() {
         // salva o tema
         localStorage.setItem('theme', theme); 
     });
+
+    //! ===========================|visualizar erros|================================
+    console.log('tema dark adicionado')
 }
 
 // chama as funções
