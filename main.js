@@ -1,12 +1,56 @@
 // faz com que a linguagem fique em portugues 
 document.documentElement.lang="pt-br";
 
+function add_link_menu() {
+  const base = window.location.origin + "/" + window.location.pathname.split("/")[1];
+  console.log(base)
+
+//   const container = document.querySelector("details");
+
+//   container.innerHTML = `
+//     <summary>Atividades</summary>
+//     <a href="${base}/index.html">Introdução da Disciplina</a><br>
+
+//     <details>
+//       <summary>1° Bimestre</summary>
+//       <a href="${base}/atvs/bim1_teoria/atv2/index.html">Atividade 02: A Evolução do Windows</a><br>
+//       <a href="${base}/atvs/bim1_teoria/atv3/index.html">Atividade 03: A Evolução das interfaces da Apple</a><br>
+//       <a href="${base}/atvs/bim1_teoria/atv4/index.html">Atividade 04: Análise Crítica</a><br>
+//     </details>
+
+//     <details>
+//       <summary>2° Bimestre</summary>
+//       <a href="${base}/atvs/bim2_pratica/atv1/index.html">Identidade Visual</a>
+//     </details>
+//   `;
+}
+
+{/* <details>
+        <summary>Atividades</summary>
+        <a href="/index.html">Introdução da Disciplina</a><br> <!-- os caminhos estão referenciados com base na pasta inicial do diretorio -->
+        <!-- mostra as atividades do primeiro bimestre -->
+        <details>  
+            <summary>1° Bimestre</summary>
+            <a href="./atvs/bim1_teoria/atv2/index.html">Atividade 02: A Evolução do Windows</a><br>
+            <a href="./atvs/bim1_teoria/atv3/index.html">Atividade 03: A Evolução das interfaces da Apple</a><br>
+            <a href="./atvs/bim1_teoria/atv4/index.html">Atividade 04: Análise Crítica a sites sem </a><br>
+            <a href="./atvs/bim1_teoria/atv5/index.html">Atividade 05: Pesquisa sobre ferramentas de padronização</a><br>
+            <a href="./atvs/bim1_teoria/atv6/index.html">Pesquisa: O que é Gestalt e Heurísticas de Nielsen</a>
+        </details>
+
+        <details>
+            <summary>2° Bimestre</summary>
+            <a href="./atvs/bim2_pratica/atv1/index.html">identidade visual</a>
+        </details>        
+    </details>
+    <button id="btn_config" onclick="open_close_config()">configurações</button> */}
+
 // adiciona o style e as divs, menu e config, em todos os arquivos que receberem o main.js
 async function add_element(){
     //* add style 
     const link = document.createElement('link'); //? cria uma variavel que recebe o elemento link
     link.rel = 'stylesheet'; //? configura 
-    link.href = './style.css'; //? referencia o css
+    link.href = relative_path + '/style.css'; //? referencia o css
     document.head.append(link); //? adiciona o elemento
     //! o append() adiciona no final 
 
@@ -25,11 +69,11 @@ async function add_element(){
 // procura o arquivo de menu 
 async function include_complement() {
     // coleta o caminho do menu 
-    const menu_bar = await fetch("/complementos/barra_menu.html");
+    const menu_bar = await fetch( relative_path + "/complementos/barra_menu.html");
     document.getElementById('menu_div').innerHTML = await menu_bar.text();
     
     // coleta o caminho da caxa de preferencias
-    const config_box = await fetch('/complementos/configuracao.html');
+    const config_box = await fetch( relative_path + '/complementos/configuracao.html');
     document.getElementById('config_div').innerHTML = await config_box.text();
     
 }
@@ -75,5 +119,6 @@ async function start() {
 
 // chama as funções
 add_element();
+add_link_menu();
 start();
 
