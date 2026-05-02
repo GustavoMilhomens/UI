@@ -1,52 +1,52 @@
-/UI  (Pasta Raiz)
-├── /atvs                                       (Pasta das Atividades)
-│   ├── /atv2                                    (Pasta da Atividade 2: A evolução do windows)
+UI  (Pasta Raiz)
+├── atvs                                       (Pasta das Atividades)
+│   ├── atv2                                    (Pasta da Atividade 2: A evolução do windows)
 │   │   ├── index.html
 │   │   ├── ...
 │   │   └──
 │   │
-│   ├── /atv3                                    (Pasta da Atividade 3: A evolução da apple)
+│   ├── atv3                                    (Pasta da Atividade 3: A evolução da apple)
 │   │   ├── index.html
 │   │   ├── ...
 │   │   └──
 │   │
-│   ├── /atv4                                    (Pasta da Atividade 4: Critica a sites que não seguem os principios de espaçamento )
+│   ├── atv4                                    (Pasta da Atividade 4: Critica a sites que não seguem os principios de espaçamento )
 │   │   ├── index.html
 │   │   ├── ...
 │   │   └──
 │   │
-│   ├── /atv5                                    (Pasta da Atividade 5: Pesquisa sobre ferramentas para estabelecer consistência e padronização em UI)
+│   ├── atv5                                    (Pasta da Atividade 5: Pesquisa sobre ferramentas para estabelecer consistência e padronização em UI)
 │   │   ├── index.html                           (breve explicação dobre a atividade)
 │   │   ├── fremeworks.html
 │   │   ├── atomic_disign.html
 │   │   ├── style_guide.html
 │   │   ├── ...
-│   │   └── /imgs
+│   │   └── imgs
 │   │       ├── angular-logo.png
 │   │       ├── bootstrap-logo.png
 │   │       ├── svelte-logo.png
 │   │       ├── ...
 │   │       └── 
 │   │
-│   ├── /pesquisa_gestalt_heuristica             (Pasta da Atividade de pesquisa sobre gestailt e heuristica)
+│   ├── pesquisa_gestalt_heuristica             (Pasta da Atividade de pesquisa sobre gestailt e heuristica)
 │   │   ├── index.html
 │   │   ├── ...
-│   │   └── /imgs
+│   │   └── imgs
 │   │       ├── ...
 │   │       └── 
 │   │
-│   ├── /test                                   (pasta isolada do site onde testa partes do sistema sem alterar significativamente o site )
+│   ├── test                                   (pasta isolada do site onde testa partes do sistema sem alterar significativamente o site )
 │   │   └── ...                                 (todos os testes são colocados depois em uma outra pasta separada chamada html/testes) 
 │   │
-│   ├── /...
+│   ├── ...
 │   │   ├── ...
 │   │   └── 
 │   │
-│   └── /...
+│   └── ...
 │       ├── ...
 │       └── 
 │
-├── /complementos
+├── complementos
 │   ├── barra_menu.html                          (barra lateral do menu)
 │   ├── preferencia.html                         (caixa de preferencias onde pode customozar a aparencia do site)
 │   ├── ...
@@ -56,4 +56,4 @@
 │
 ├── style.css
 │
-└── index.html                                   (Página principal/Home: explicação sobre a materia e o aluno )
+└── index.html                                   (Página principal\Home: explicação sobre a materia e o aluno )
