@@ -65,6 +65,10 @@ body{
         right: 0;
     }
 
+    #menu_div_bar :hover{
+        background-color: blue;
+    }
+
     /* butão de ativação da barra menu  */
     #btn_menu{
         /* cor */
