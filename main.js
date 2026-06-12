@@ -15,7 +15,7 @@ const base = relative_path.join("/"); //? junta tudo e coloca barra entre os val
 //* adiciona o os links das atividades no menu de acordo com a pasta base 
 function add_link_menu() {
     //* identifica o butão btn_config
-    const btn = document.getElementById("btn_config");
+    const btn = document.getElementById("btn_theme");
 
     //* cria o datails 
     const details = document.createElement("details");
@@ -73,7 +73,7 @@ async function add_element(){
     //* adiciona os links de atividades da barra menu 
     await add_link_menu();
 
-    //! ===========================|visualizar erros|================================
+    //! ===========================|visualizar resultado|================================
     console.log('style.css, menu_div e config_div adicionado')
 }
 
@@ -83,11 +83,7 @@ async function include_complement() {
     const menu_bar = await fetch( base + "/complementos/barra_menu.html");
     document.getElementById('menu_div').innerHTML = await menu_bar.text();
     
-    // coleta o caminho da caxa de preferencias
-    const config_box = await fetch( base + '/complementos/configuracao.html');
-    document.getElementById('config_div').innerHTML = await config_box.text();
-    
-    //! ===========================|visualizar erros|================================
+    //! ===========================|visualizar resultado|================================
     console.log('complementos adicionados')
 }
 
@@ -127,7 +123,7 @@ async function start() {
         localStorage.setItem('theme', theme); 
     });
 
-    //! ===========================|visualizar erros|================================
+    //! ===========================|visualizar resultado|================================
     console.log('tema dark adicionado')
 }
 
