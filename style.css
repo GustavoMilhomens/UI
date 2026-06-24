@@ -18,7 +18,7 @@ body.dark_theme{
 
 /* modifica a aparencia do site */
 body{
-    /* ?============================== body-color ================================ */
+    /* ?============================== body-color ================================= */
     background-color: var(--bg-body-color);
     color: var(--text-color);
     transition: 0.3s;
